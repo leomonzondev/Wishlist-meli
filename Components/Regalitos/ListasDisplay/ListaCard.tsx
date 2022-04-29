@@ -6,7 +6,7 @@ import {GrUnlock, GrLock} from 'react-icons/gr'
 
 import styles from '../../../styles/Regalitos/ListasDisplay/ListaCard.module.css'
 import { RiLockLine, RiLockUnlockLine } from 'react-icons/ri'
-import { addLista, deleteList } from '../../../Store/listSlice'
+import { addLista, deleteList, selectListState } from '../../../Store/listSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { AddListaForm } from '../AddListaForm'
 import Link from 'next/link'
@@ -27,6 +27,10 @@ export const ListaCard = ({listId, title, quantity}) => {
 
   const dispatch = useDispatch()
 
+  const listas = useSelector(selectListState)
+
+  console.log(listas);
+
   const manage = useSelector(selectManage)
 
   const titulo = title
@@ -35,6 +39,7 @@ export const ListaCard = ({listId, title, quantity}) => {
     dispatch(addManage({titulo}))
     console.log(manage.management);
   }
+
 
   
   return (

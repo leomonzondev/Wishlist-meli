@@ -8,23 +8,29 @@ import styles from '../../styles/Regalitos/SearchResults.module.css'
 export const SearchResults = ({listaId, productId, image, title, price}) => {
 
 
-
-
+  const listas = useSelector(selectListState)
 
     const dispatch = useDispatch()
 
+    const quantity = 1
+
     const addProductToList = (e,  listaId, productId, image, title, price ) => {
       e.preventDefault()
+
       dispatch(addProduct({
         listaId,
         productos:{
           productId,
           title,
           image,
-          price
+          price,
+          quantity
         }
       }))
       
+
+
+
     }
 
 
@@ -33,7 +39,7 @@ export const SearchResults = ({listaId, productId, image, title, price}) => {
         <img src={image} />
         <div className={styles.text}>
             <h3>{title}</h3>
-            <p>{price}</p>
+            <p>{new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(price)}</p>
         </div>
         <button onClick={ e => addProductToList(e, listaId, productId, image, title, price)}>Agregar</button>
     </div>

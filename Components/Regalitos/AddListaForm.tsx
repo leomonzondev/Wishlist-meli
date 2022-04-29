@@ -9,17 +9,19 @@ import { useOutsideClick } from '../../Hooks/useOutsideClick';
 
 export const AddListaForm = ({title, listId, setChangeTitle, changeTitle}) => {
 
-    const [newTitle, setNewTitle] = useState(title)
+    const [newTitle, setNewTitle] = useState('')
     const inputField = useRef(null)
     
 
-    useOutsideClick(inputField, (listId, newTitle) => {
+    useOutsideClick(inputField, () => {
+        setChangeTitle(!changeTitle)
         dispatch(updateTitle({
             listId,
             newTitle
         }))
-        setChangeTitle(!changeTitle)
-        
+        if(newTitle == '') {
+            setNewTitle(title)
+        }
         console.log(newTitle);
     })
 
@@ -27,21 +29,14 @@ export const AddListaForm = ({title, listId, setChangeTitle, changeTitle}) => {
 
     const dispatch = useDispatch()
 
-
-    const onTitleChanged = e => {
-        setNewTitle(e.target.value)
-        console.log(newTitle);
-    }
-
     const handleTitle = (e, listId, newTitle) => {
         e.preventDefault()
         if(newTitle == '') {
-            newTitle = 'Agregar titulo'
+            setNewTitle('Doble click para cambiar el titulo')
         }
         dispatch(updateTitle({
             listId,
             newTitle
-
         }))
 
         setChangeTitle(!changeTitle)
@@ -54,8 +49,7 @@ export const AddListaForm = ({title, listId, setChangeTitle, changeTitle}) => {
 
             <input
                 value={newTitle}
-                onChange={onTitleChanged}
-                placeholder={newTitle}
+                onChange={(e) => setNewTitle(e.target.value)}
                 ref={inputField}
             />
         </form>

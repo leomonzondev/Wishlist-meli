@@ -6,6 +6,11 @@
   --amayiro: #fff159;
 }
 
+
+::selection {
+  background-color: #d4d3d3;
+}
+
 html,
 body {
   padding: 0;

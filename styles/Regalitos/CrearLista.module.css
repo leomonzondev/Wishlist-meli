@@ -1,20 +1,39 @@
 .container {
     padding: 97px 0 0 115px ;
+    width: 80%;
 
 }
 
 .nav {
     display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav p{ 
+    color: var(--blue);
+    cursor: pointer;
+    margin-top: -60px;
+    font-size: 16px;
+}
+
+.title {
+    display: flex;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
     gap: 10px;
     align-items: baseline;
-}
+    width: 100%;
 
-.container h2 {
 
-    width: 70px;
-    cursor: pointer;
     user-select: none;
 }
+
+
 

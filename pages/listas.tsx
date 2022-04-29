@@ -15,7 +15,7 @@ import { selectListState } from '../Store/listSlice';
 
 
 
-const listas = () => {
+const Listas = () => {
 
   const [btnCreate, setBtnCreate] = useState(false)
 
@@ -44,13 +44,10 @@ const listas = () => {
         ? <CrearLista />
         : <Hero setEstado={handleBtn} />
       }
-
-        {/* <PostList />
-        <AddPostForm /> */}
     </div>
     
 
   )
 }
 
-export default listas
+export default Listas

@@ -38,7 +38,7 @@ export const Searcher = ({listaId, listaTitle, productsLists}) => {
   return (
     <div className={styles.searcher}>
         <form onSubmit={handleSearch} className={styles.searcherForm} >
-            <input placeholder='Buscá articulos para agregar...' value={input} onChange={handleInput} />
+            <input placeholder='Buscá productos para agregar...' value={input} onChange={handleInput} />
             <button>
                 <AiOutlineSearch size={20} color="#666" />
             </button>

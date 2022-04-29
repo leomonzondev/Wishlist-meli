@@ -7,7 +7,8 @@ import {BsCardList} from 'react-icons/bs'
 
 import styles from '../../styles/Regalitos/Sidebar.module.css'
 import { selectListState } from '../../Store/listSlice'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { addManage } from '../../Store/managementSlice'
 
 
 export const Sidebar = () => {
@@ -17,41 +18,44 @@ export const Sidebar = () => {
 
     const listas = useSelector(selectListState)
 
+    const dispatch = useDispatch()
 
     const handleShow = () => {
         setShowsLists(!showLists)
     }
 
 
-    if (typeof window !== 'undefined') {
-        const body = document.getElementById('sideBar')
-        let lastScroll = 0
+    // if (typeof window !== 'undefined') {
+    //     const body = document.getElementById('sideBar')
+    //     let lastScroll = 0
         
-        window.addEventListener('scroll',() => {
-            let currentScroll = window.scrollY
+    //     window.addEventListener('scroll',() => {
+    //         let currentScroll = window.scrollY
             
-            if (currentScroll <= 0 ) {
-                body.classList.remove('scroll-up')
-            }
+    //         if (currentScroll <= 0 ) {
+    //             body.classList.remove('scroll-up')
+    //         }
             
-            if ( currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
-                body.classList.remove('scroll-up')
-                body.classList.add('scroll-down')
-            }
+    //         if ( currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
+    //             body.classList.remove('scroll-up')
+    //             body.classList.add('scroll-down')
+    //         }
             
-            if (currentScroll < lastScroll && body.classList.contains('scroll-down')){
-                body.classList.remove('scroll-down')
-                body.classList.add('scroll-up')
-            }
+    //         if (currentScroll < lastScroll && body.classList.contains('scroll-down')){
+    //             body.classList.remove('scroll-down')
+    //             body.classList.add('scroll-up')
+    //         }
             
-            lastScroll = currentScroll
+    //         lastScroll = currentScroll
             
 
-        })
+    //     })
+    // }
 
 
+    const enterToManagement = (titulo) => {
+        dispatch(addManage({titulo}))
     }
-
     
   return (
     <div className={styles.container} id="sideBar">
@@ -75,7 +79,7 @@ export const Sidebar = () => {
                         {
                             listas.length <= 0
                             ? <li><p style={{margin:'0 100px 0 0'}}>Aún no tenés una lista creada </p></li>
-                            : listas.map(list => <li key={list.id}><p>{list.title}</p></li>)
+                            : listas.map(list => <li key={list.id} onClick={() => enterToManagement(list.title)} ><p>{list.title}</p></li>)
                         }
                     </ul>
                     )

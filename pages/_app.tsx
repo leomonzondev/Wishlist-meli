@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   <Provider store= {store}>
     <Head>
       <title>Mercado Libre - Envíos gratis en el día</title>
-      <link rel="icon" href={icon} />
+
     </Head>
     <NavBar/>
     <Component {...pageProps} />

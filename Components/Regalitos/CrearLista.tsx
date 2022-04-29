@@ -11,6 +11,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 export const CrearLista = () => {
 
 
+
  const manage = useSelector(selectManage)
 
   const title = ''
@@ -20,16 +21,18 @@ export const CrearLista = () => {
   const deleteManage = (title) => {
     let titulo = title
     dispatch(addManage({titulo}))
-    // console.log('borrado');
   }
 
   return (
     <div className={styles.container}>
-      <div>
-        <p onClick={() => deleteManage(title)} >Listas</p>
+      <div className={styles.nav}>
+        <p onClick={() => deleteManage(title)}> Listas</p>
+        {
+          manage.management.titulo !== '' && ( <div className={styles.arrow}><MdKeyboardArrowRight style={{margin:'-57px 5px 0 0'}} /> <p>{manage.management.titulo}</p> </div>)
+        }
       </div>
  
-      <div className={styles.nav}>
+      <div className={styles.title}>
         <h2>{manage.management.titulo}</h2>
       </div>
 

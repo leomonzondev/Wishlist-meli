@@ -26,19 +26,24 @@ const listSlice = createSlice({
         deleteList: ( state, action ) => {
             state.lists = state.lists.filter(list => list.id !== action.payload.listId)
         },
-        addProduct: (state, {payload} ) => {
-             state.lists.filter(list => {   
-                if(list.id === payload.listaId) {
-                    list.products.push(payload.productos)
-                }
-            })
-        },
-        deleteProduct: (state, action ) => {
+        addProduct:{
+            reducer:(state, {payload} ) => {
             state.lists.filter(list => {
-                if(list.id === action.payload.listaId) {
-                    list.products.filter(product => product.productId !== action.payload.productId)
-                }
-            })
+               if(list.id === payload.listaId) {
+
+                    const exist = list.products.find(product => product.productId === payload.productos.productId)
+                    if(exist) {
+                        list.products.quantity
+                    } else {
+                        list.products.push(payload.productos)
+
+                    }
+               }})
+            },
+            
+        },
+        deleteProduct: ( state, action ) => {
+            console.log(initialState)
         },
         updateTitle: (state, action) => {
             state.lists.filter(list => {

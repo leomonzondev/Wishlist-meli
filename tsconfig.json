@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "Components/tests/App.test.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "Components/tests/App.test.js", "Store/listSlice.js"],
   "exclude": ["node_modules"]
 }

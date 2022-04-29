@@ -15,7 +15,7 @@ import { MdOutlinePhoneAndroid } from 'react-icons/md'
 import {FiMonitor} from 'react-icons/fi'
 import { BsCamera, BsDisc, BsFillHeartFill, BsMic } from 'react-icons/bs'
 import { BiBuildingHouse, BiCategory, BiFridge } from 'react-icons/bi'
-import Lottie from 'lottie-web'
+
 
 
 import { useEffect, useRef } from 'react';
@@ -26,21 +26,6 @@ import { useEffect, useRef } from 'react';
 const size = 48
 
 const Home: NextPage = () => {
-
-
-  const heart = useRef(null)
-
-
-    const handleHeart = () => {
-      Lottie.loadAnimation({
-        container: heart,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: require('./hearts.json'),
-      })
-      console.log('entro');
-    }
 
 
 
@@ -106,7 +91,7 @@ const Home: NextPage = () => {
             <li>
               <div className={styles.info_slide}>
                 <div className={styles.imgContainer}>
-                  <Image src={buy} width={81} height={50}  />
+                  <Image src={buy} width={81} height={50} alt="buy"  />
                 </div>
                 <h4>Comprá sin moverte</h4>
                 <p>Encontrá lo que necesitas, y coordiná el pago y la entrega con el vendedor. Es fácil y rápido. ¡Todos podemos hacerlo!</p>
@@ -117,7 +102,7 @@ const Home: NextPage = () => {
             <li>
               <div className={styles.info_slide}>
                 <div className={styles.imgContainer}>
-                  <Image src={ship} width={56} height={49} />
+                  <Image src={ship} width={56} height={49} alt="ship" />
                 </div>
                 <h4>Recibí tu producto</h4>
                 <p>Acordá la entrega de tu compra con el vendedor. Podés recibirlo en tu casa, en la oficina o retirarlo. ¡Vos decidís qué preferis!</p>
@@ -129,7 +114,7 @@ const Home: NextPage = () => {
               <div className={styles.info_slide}>
                 <div className={styles.imgContainer}>
 
-                  <Image src={sell} width={63} height={56} />
+                  <Image src={sell} width={63} height={56} alt="sell"  />
                 </div>
                 <h4>Vendé gratis</h4>
                 <p>Miles de personas quieren lo que ofreces. Publicá y vas a ver qué pronto llegan las compras. ¡Vos no pagas nada!</p>
@@ -140,7 +125,7 @@ const Home: NextPage = () => {
 
         </footer>
         <div className={styles.firma}>
-            <p>Made it with <BsFillHeartFill ref={heart} onMouseEnter={handleHeart} color="fff159" size={16} /> by <a href='https://github.com/Leob4rr0s' target="_blank" rel='noreferrer' >Leo</a>  </p>
+            <p>Made it with <BsFillHeartFill  color="fff159" size={16} /> by <a href='https://github.com/Leob4rr0s' target="_blank" rel='noreferrer' >Leo</a>  </p>
           </div>
     </div>
     </>

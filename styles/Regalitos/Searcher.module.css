@@ -1,0 +1,88 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    
+}
+
+
+.searcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.searcherForm {
+    display: flex;
+    z-index: 910;
+    will-change: left;
+    transition: left .15s ease-out;
+    height: 39px;
+    width: 590px;
+
+}
+
+.searcherForm button {
+    background: white;
+    border-style: none;
+    box-shadow: 0px 1.5px 1px 0px rgba(0, 0, 0, 0.158);
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding: 6px;
+    border-radius: 0 1px 1px 0;
+
+}
+
+.searcherForm button::before {
+    content: "";
+    display: block;
+    height: 26px;
+    border-left: 1px solid #e6e6e6;
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 1px;
+}
+
+.searcherForm input {
+    width: 600px;
+    padding: 8px 1px;
+    right: 84px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    box-shadow:0 1.5px 1px 0 rgba(0, 0, 0, 0.158);
+    border: none;
+    border-radius: 1px 0 0 1px;
+    padding-left: 15px;
+    height: 39px;
+    font-size: 15px;
+    color: #656565;
+    font-weight:  300;
+}
+
+.searcherForm input:focus {
+    outline: none;
+}
+
+.searcherForm input::placeholder{
+    color: #d6d6d6;
+    font-weight: 200;
+}
+
+
+.resultBoxContainer {
+    display: flex;
+    margin-right: 115px;
+    flex-wrap: wrap;
+    background-color: white;
+    gap: 20px;
+    border-radius: 3px;
+    margin-bottom: 18px;
+    width: 1200px;
+    margin: 20px auto;
+
+
+}

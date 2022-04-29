@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+/* .text{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(89, 0, 255);
+} */
+
+.container h2 {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    width: 100%;
+    margin: 13px 0 13px 0;
+}
+
+
+.container button {
+    cursor: pointer;
+}
+
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.eliminar {
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+    color: white;
+    background-color: var(--red);
+    font-size: 16px;
+}
+
+.cancelar {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+}

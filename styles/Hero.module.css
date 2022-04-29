@@ -1,0 +1,88 @@
+.listas {
+    margin:  0 auto;
+}
+
+.heroContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
+.hero {
+    display: flex;
+}
+
+.bannerContainer {
+    height: 400px;
+    width: 1380px;
+    min-height: 400px;
+    min-width: 1100px;
+    overflow: hidden;
+    background: url(../images/objetos3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+.action {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin:250px 0  0 320px;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.action_slide {
+    display: flex;
+    width: 360px;
+    gap: 10px;
+    user-select: none;
+}
+
+.action_slide p {
+    font-size: 13px;
+ 
+}
+
+
+.action_slide > :nth-child(2) {
+    color: #333;
+}
+
+
+.action_slide:hover > :nth-child(2) {
+    color: #3483fa;
+}
+
+
+.title {
+    position: absolute;
+    color: white;
+    margin:40px 0  0 420px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+
+.title button {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+.infoContainer {
+    background-color: white;
+}
+
+
+.infoSlide {
+
+}
+

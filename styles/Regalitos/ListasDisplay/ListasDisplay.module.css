@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 15%;
+}
+
+.agregar{
+    width: 500px;
+    height: 150px;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.agregar:hover {
+    background-color: #3483fa;
+}
+
+.agregar > :nth-child(1) {
+
+    color:  #3483fa;
+}
+
+.agregar:hover > :nth-child(1){
+    color:  white;
+}

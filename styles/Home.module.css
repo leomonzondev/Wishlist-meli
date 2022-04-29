@@ -1,0 +1,162 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
+    flex-direction: column;
+
+}
+
+.categoriasContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 170px;
+    min-height: 170px;
+    max-width: 1190px;
+    max-height: 445px;
+    margin: 0 71px ;
+    overflow: hidden;
+
+}
+
+.categoriasContainer h2 {
+    padding: 50px 0 25px;
+    font-weight: 300;
+    color: #666;
+    font-size: 24px;
+}
+
+.categorias {
+    box-shadow:  1px 1px 0 rgba(0, 0, 0, 0.445);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    width: 170px;
+    height: 170px;
+}
+
+.ul li:hover {
+    background-color: #3483fa;
+}
+
+.ul > li > :nth-child(1) {
+    margin-bottom: 15px;
+    color: #3483fa;
+}
+
+.ul li:hover > :nth-child(1) {
+    color: white;
+}
+
+.ul li:hover p {
+    color: white;
+}
+
+
+
+.footer {
+    background-color: white;
+    overflow: hidden;
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 50px 0 100px;
+
+}
+
+.footer ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.info_slide {
+    padding: 35px 45px 20px;
+    height: 242px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info_slide ul {
+    
+}
+
+/* .info_slide ::before {
+    background-color: #491515;
+    content: "";
+    display: block;
+    height: 65px;
+    margin-top: -50.5px;
+    position: absolute;
+    width: 1px;
+} */
+
+.imgContainer {
+    width: 310px;
+    height: 55px;
+}
+
+.info_slide h4 {
+    font-size: 20px;
+    color: #4b4b4b;
+    line-height: 1.4;
+    padding: 15px 0 0;
+    font-weight: 400;
+}
+
+.info_slide p {
+    font-size: 14px;
+    width: 330px;
+    height: 54px;
+    color: #999;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 8px;
+}
+
+.info_slide a {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #3483fa;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+.firma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
+    padding: 8px 0 5px 0;
+    text-align: center;
+    color: #a5a5a5;
+}
+
+.firma a {
+    text-decoration: none;
+}

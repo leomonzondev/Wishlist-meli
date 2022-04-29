@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.container img {
+    max-width: 200px;
+    width: 200px;
+}
+
+.text {
+    padding: 20px;
+}
+
+.textnbtn button {
+    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+    color: var(--blue);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.textnbtn button:hover {
+    color: var(--red);
+}

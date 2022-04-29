@@ -1,0 +1,168 @@
+.navBar {
+    display: flex;
+    background-color: #fff159;
+    width: 100%;
+    box-shadow:0 1px 0 0 rgb(0 0 0 / 10%);
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0 10px 0;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    gap: 40px;
+}
+
+.leftContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo {
+    background-image: url(https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.8/mercadolibre/logo__large_plus.png);
+    height: 34px;
+    top: 11px;
+    width: 134px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -999px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.envio {
+    display: flex;
+}
+
+.envioText{
+
+}
+
+.envio p {
+    line-height: 13px;
+    color: #333;
+    font-size: 14px;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+}
+
+.envio span {
+    font-size: 12px;
+    color: #868686;
+}
+
+
+.midContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.searcher {
+    display: flex;
+    z-index: 910;
+    will-change: left;
+    transition: left .15s ease-out;
+    height: 39px;
+    width: 590px;
+
+}
+
+.searcher button {
+    background: white;
+    border-style: none;
+    box-shadow: 0px 1.5px 1px 0px rgba(0, 0, 0, 0.158);
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding: 6px;
+    border-radius: 0 1px 1px 0;
+
+}
+
+.searcher button::before {
+    content: "";
+    display: block;
+    height: 26px;
+    border-left: 1px solid #e6e6e6;
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 1px;
+}
+
+.searcher input {
+    width: 600px;
+    padding: 8px 1px;
+    right: 84px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    box-shadow:0 1.5px 1px 0 rgba(0, 0, 0, 0.158);
+    border: none;
+    border-radius: 1px 0 0 1px;
+    padding-left: 15px;
+    height: 39px;
+    font-size: 15px;
+    color: #656565;
+    font-weight:  300;
+}
+
+.searcher input:focus {
+    outline: none;
+}
+
+.searcher input::placeholder{
+    color: #d6d6d6;
+    font-weight: 200;
+}
+
+
+
+.ul_user a {
+    color: #333;
+    font-weight: 500;
+}
+
+.navBar ul {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    display: flex;
+    font-size: 13px;
+    color: #7f782c;
+    user-select: none;
+}
+
+.ul_products li {
+    display: flex;
+    align-items: center;
+}
+
+.ul_products a:hover {
+    color: #312f11;
+    cursor: pointer;
+}
+
+.ul_products a {
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.suscripcion {
+    font-size: 16px;
+    
+}
